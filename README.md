@@ -38,14 +38,14 @@ https://libhartll.github.io/PWGenerator03/
 GitHub Link
 https://github.com/LibhartLL
 
-LinkedIn Link
-https://www.linkedin.com/in/lindsay-libhart-74453a238
-
 Screenshot:
 <img src="./assets/2022-06-24 12.31.45.gif" width="80%"></img>
 
 Contact
 Lindsay Libhart
 https://github.com/LibhartLL
+
+LinkedIn Link
+https://www.linkedin.com/in/lindsay-libhart-74453a238
 
 June 24, 2023
