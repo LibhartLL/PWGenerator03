@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!--type declation-->
+<html lang="en"> <!-- english-->
+  <head> <!--sheet title and link to css-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" /> <!--link to css file-->
+  </head>
+  <body>
+    <div class="wrapper">  <!--wrapper class, wrapps the object (card)-->
+      <header> <!--wrapper title-->
+        <h1>Password Generator</h1> <!-- wrapper h1-->
+      </header>
+      <div class="card"> <!--card inside the wrapper-->
+        <div class="card-header"> <!--card header class-->
+          <h2>Generate a Password</h2> <!--card-header h2-->
+        </div>
+        <div class="card-body"> <!--where you type the password-->
+         <!--multiline text input control used in a form to collect user inputs creates a input box -->
+         <!--readonly is a boolean attribute, this area should be read only-->
+         <!--the id attribute in the textarea allows it be associated with the lable password-->
+         <!--the placeholder attribute specifies a short discription of what is the expected value viewable to the user-->
+         <!--provides an invisable label where a visible label cannot be used-->
+         <textarea
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer"> <!--card-footer class includes the button to generate password-->
+          <!--this is the button its clas is btn and states user to Generate Password-->
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script> <!--link to js file-->
+  </body>
+</html>
