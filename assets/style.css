@@ -1,38 +1,36 @@
-*, /* selects all elements*/
-*::before, /* insert somethting before the content*/
-*::after { /* insert somehting after the content*/
-  box-sizing: border-box;  /*ensures that all elements are sized in this more intuitive way.*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-/*START html and body styling */
+
 html,
 body,
-.wrapper { /* html and body formating, wrapper wraps around a single object to provide more functionality and interface to it */
-  height: 100%; /* sized 100 of the window */
+.wrapper {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd; /* background color of whole page */
+  background-color: #f9fbfd;
 }
-/*END html and body styling*/
 
-/*START element styling*/
-.wrapper { /* wrapper element used to wrap the card */
+.wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-header { /* Pasword Generator header */
+header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
 
-.card { /*the Generate Password card set insid of the wrapper*/
+.card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
@@ -44,7 +42,7 @@ header { /* Pasword Generator header */
   padding: 30px 40px;
 }
 
-.card-header::after { /*creates a pseudo-element that is the last child of .card element*/
+.card-header::after {
   content: " ";
   display: block;
   width: 100%;
@@ -52,57 +50,57 @@ header { /* Pasword Generator header */
   height: 2px;
 }
 
-.card-body { /*designates the min-height of the .card-body element.  It prevents the used value of height prop form becoming smaller thatn the min-height specified value*/
+.card-body {
   min-height: 100px;
 }
 
-.card-footer { /*the "Generate Password" text will be centered on the button*/
+.card-footer {
   text-align: center;
 }
 
-.card-footer::before { /* ::before is above all content in the element .card-footer.*/
-  content: " "; /*space ::before*/
-  display: block; /*block elemenet, starts on a new line and takes up the whole width*/
-  width: 100%; /*the elements total width is 100% fo its contating block*/
-  background: #e7e9eb; /*card-footer element backgroudn color*/
-  height: 2px; /*height of the element card-footer*/
-}
-
-.card-footer::after { /* ::after is below all content in the element .card-footer.*/
+.card-footer::before {
   content: " ";
   display: block;
-  clear: both; /* element .card-footer is pushed below the left and right floated elements.*/
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
 }
 
-.btn { /*button element styling*/
-  border: none; 
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
-  display: inline-block; /*inline-block allows to set a width and height on the btn element*/
+  display: inline-block;
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
-  cursor: pointer; /* makes the cursor a pointer finger when the cursor is over the btn element*/
+  cursor: pointer;
 }
 
-button[disabled] { /*boolean attribute when present, the button should be disabled (un-clickable).  Used for when a condition must be met in order for the button to be used again*/
+button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
-.float-right { /*element floats to the right of the container*/
+.float-right {
   float: right;
 }
 
-#password { /* note: # is an id selector from the textarea in the html file*/
-  -webkit-appearance: none; /* webkit-appearance property enables web authors to change the appearance of HTML elements to resemble native User interface (UI) controls.*/
-  -moz-appearance: none; /* moz-appearance propert is use din Gecko (firefox).*/
-  appearance: none; /* used to control native appearance of UI controls*/
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   display: block;
   width: 100%;
@@ -119,13 +117,10 @@ button[disabled] { /*boolean attribute when present, the button should be disabl
   resize: none;
   overflow: hidden;
 }
-/* STOP Element styling */
 
-/*START Media quieries*/
-/* meida rules are used in media quieries to apply different styles for differet media types, ie iphone, galaxy, tablet)*/
-@media (max-width: 690px) { /*sets the btn element to work on screens 690px or less */
+@media (max-width: 690px) {
   .btn {
-    font-size: 1rem; /* root em (html) is a relative unit not affected by the size of the parent element and is based on the root of the doc.  This means that each successive level does not get bigger*/
+    font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
@@ -135,8 +130,9 @@ button[disabled] { /*boolean attribute when present, the button should be disabl
   }
 }
 
-@media (max-width: 500px) { /*sets the btn element to work on screens 500px or less */
+@media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
   }
 }
+
