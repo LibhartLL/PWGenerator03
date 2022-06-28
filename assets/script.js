@@ -1,32 +1,32 @@
 //Assignment code
 var generateBtn = document.querySelector("generate")
 
-function randomInt(min, max) {
+function randomInt(min, max) {  // program to get a random item from an array and find the min and max values
   if (!max) {
     max = min
     min = 0
   }
-  var rand = Math.random()
-  return Math.floor(min*(1 - rand) +rand*max)
+  // Generates a random number between two numbers in JS.  https://www.learn-codes.net/javascript/how-to-create-a-random-number-between-a-range-javascript/
+  var rand = Math.random() //gets a random number between (0-1 ex. 0 to 0.99999 1 is excluded)
+  return Math.floor(min*(1 - rand) +rand*max) //floor truncates the decimal and gives us back a whole number
 }
-   
+   //get random item from the array
 function getRandomItem(list) {
   return list[randomInt(list.length)]
 }
-
-
+// generate password 8-128 characters
 function generatePassword() {
   while (true) {
   
-    var userInput = window.prompt("How long do you want your password to be (1-128)?") 
+    var userInput = window.prompt("How long do you want your password to be (8-128)?") 
   //user exited the prompt
     if (userInput === null) {
     return
     }
   
-    var passwordLength = parseInt(userInput)
+    var passwordLength = parseInt(userInput) //parses a string argument and returns a integer
 
-    if (isNaN(passwordLength)) { // NaN - not a number
+    if (isNaN(passwordLength)) { // NaN - not a number (because parseInt gives us a integer)
       window.alert("That's not a number!") 
     } else if (passwordLength < 8 || passwordLength > 128) { //if password is < than 8 or password is > 128
       window.alert("Invalid password length.  The length should be between 8 and 128 characters.")
@@ -34,7 +34,7 @@ function generatePassword() {
       break
     }
   }
-  
+  //input variables and window confirm to disply the string I want in the display box
   var userWantsNumbers = window.confirm("Would you like to include numbers in your password?")
   var userWantsSymbols = window.confirm("Would you like to include symbols in your password?")
   var userWantsLowercase = window.confirm("Would you like to include lowercase letters in your password?")
@@ -47,10 +47,8 @@ function generatePassword() {
   var symbolList = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.']
   var optionsList = [] 
   
-  for (var i = 0; i< lowercaseList.length; i++) {
-    uppercaseList[i] = lowercaseList[i].toUpperCase()
-  }
 
+// use array push method
   if (userWantsNumbers === true) {
   optionsList.push(numberList)
   }
